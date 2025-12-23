@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #2d6a4f;
+    --accent-color: #52b788;
+    --bg-color: #f0f4f8;
+    --text-dark: #1b4332;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+header h1 span {
+    color: var(--accent-color);
+}
+
+header p {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Form Card Styling */
+.input-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+/* Button Styling */
+.predict-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.predict-btn:hover {
+    background-color: #1b4332;
+    transform: translateY(-2px);
+}
+
+/* Result Area Styling */
+.result-card {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px dashed var(--accent-color);
+}
+
+.result-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.crop-badge {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(82, 183, 136, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+}
